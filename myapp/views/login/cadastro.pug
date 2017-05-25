@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+
+    if mensagem != null
+        h4 #{mensagem}
+    form(action="/login/cadastro" method="POST")
+        input(name="nome" type="text" required placeholder="usuário")
+        input(name="email" type="email" required placeholder="email")
+        input(name="senha" type="password" required placeholder="senha")
+        input(name="senha2" type="password" required placeholder="senha novamente")
+        button(type="Submit") Cadastrar
+
+    
+    p
+        a(href="/login") login

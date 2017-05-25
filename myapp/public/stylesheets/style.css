@@ -1,0 +1,22 @@
+* {
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+
+.linha{
+  background-color: lavender;
+  padding-top: 10%;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 10%;
+  margin-bottom: 10px;
+}
+
+/* ********************************* LOGIN ********************************* */
+#todo{
+  background: snow;
+}
+
+.lock{
+  margin-left: 30%;
+}

@@ -1,0 +1,50 @@
+{% set title = 'login' %} 
+{% extends 'layout.html' %} 
+{% block content %}
+
+<body id="todo">
+
+    <section class="container" style="margin-top:85px;">
+
+        <div class="row">
+            <article class="col s12 m12 l12">
+                <div>
+
+                    {% if mensagem != null %}
+                    <h6>{{ mensagem }}</h6>
+                    {% endif %}
+
+                    <form method="post" action="/login">
+                        <div class="row">
+                            <div class="col s12 m10 l10">
+                                <div class="lock"><img src="/images/login/locked.png" alt=""></div>
+                                <div class="card-panel white">
+                                    <!-- ************************* Usuário ************************* -->
+                                    <div class="input-field col s12 m12 l12" id="usuario">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="entrada_titulo" type="text" class="validate" name="nome" required=''>
+                                        <label for="entrada_titulo">usuário</label>
+                                    </div>
+
+                                    <div class="input-field col s12 m12 l12">
+                                        <i class="material-icons prefix">lock</i>
+                                        <input id="password" type="password" class="validate" name="senha" required=''>
+                                        <label for="password">senha</label>
+                                    </div>
+
+                                    <center>
+                                        <input class="waves-effect waves-light btn blue darken-3" type="submit" value="login">
+                                    </center>
+                                    <a href="/login/cadastro">Cadastrar?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </div>
+    </section>
+
+</body>
+
+{% endblock %}
